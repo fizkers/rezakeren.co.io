@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://th.bing.com/th/id/OIP.i2PAs8ntxzu4hLeBZP1jygAAAA?rs=1&pid=ImgDetMain') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+        .promo-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            pointer-events: none;
+        }
+        .promo-container img {
+            height: 100px;
+        }
+        .promo-container div {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+            animation: promo 5s linear infinite;
+        }
+        @keyframes promo {
+            0% { transform: translateY(-100%); }
+            5% { transform: translateY(0); }
+            95% { transform: translateY(0); }
+            100% { transform: translateY(100%); }
+        }
+        .login-container, .welcome-container {
+            position: relative;
+            z-index: 1;
+            margin: auto;
+            width: 500px;
+            padding: 50px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .login-container img, .welcome-container img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            height: auto;
+        }
+        .login-container h2, .welcome-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007BFF;
+            font-family: 'Aclonica', sans-serif;
+        }
+        .login-container input {
+            border: none;
+            border-bottom: 1px solid #555;
+            padding: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .welcome-container {
+            display: none;
+        }
+    </style>
+    <script>
+        function login() {
+            document.querySelector('.login-container').style.display = 'none';
+            document.querySelector('.welcome-container').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="promo-container">
+        <img src="https://toppng.com/public/uploads/preview/15-off-discount-115527643699qrpwxkaxu.png" alt="Promo">
+        <div>Promo besar-besaran sedang berlangsung!</div>
+        <img src="https://toppng.com/public/uploads/preview/15-off-discount-115527643699qrpwxkaxu.png" alt="Promo">
+    </div>
+    <div class="login-container">
+        <img src="https://th.bing.com/th/id/OIP.sfE5KNjK6mziAbWh_090rQHaEz?rs=1&pid=ImgDetMain" alt="Logo">
+        <h2>SLOT MUHAMMAD REZA SYAH PAHLEVI</h2>
+        <input type="text" placeholder="Emai/No.hp" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" onclick="login()">Masuk</button>
+        <p><a href="#">Belum punya akun? Daftar baru</a></p>
+        <p><a href="#">Lupa password atau Emai/no.hp?</a></p>
+    </div>
+    <div class="welcome-container">
+        <h2>SLOOOTTTTT SABEEEEE!</h2>
+        <p>Alahai Reza beh.</p>
+    </div>
+</body>
+</html>
